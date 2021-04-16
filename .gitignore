@@ -11,7 +11,7 @@ _pycache__/
 *.DS_Store
 *.wpr
 *.wpu
-
+*.gz
 # Distribution / packaging
 .Python
 build/
