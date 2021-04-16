@@ -1,0 +1,622 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hallo
+    - yo
+    - goeiendag
+    - goedemorgen
+    - goede middag
+    - goede avond
+    - hey
+    - let's go
+
+- intent: goodbye
+  examples: |
+    - dag
+    - ciao
+    - tot later
+    - bedankt
+    - tot ziens
+    - fijne dag
+    - bye bye
+
+- intent: affirm
+  examples: |
+    - ja
+    - j
+    - jep
+    - inderdaad
+    - uiteraard
+    - dat klinkt juist
+    - correct
+    - akkoord
+    - doe maar
+    - ga uw gang
+
+- intent: deny
+  examples: |
+    - nee
+    - neen
+    - nooit
+    - ik denk het niet
+    - ik hou daar niet van
+    - geen denken aan
+    - niet echt
+    - annuleer
+    - stop
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - top
+    - zalig
+    - ik voel me zeer goed
+    - zeer goed
+    - zo perfect
+    - extreem goed
+
+- intent: mood_unhappy
+  examples: |
+    - mijn dag was verschrikkelijk
+    - ik ben verdrietig
+    - ik voel mij niet zo goed
+    - ik ben teleurgesteld
+    - zeer droevig
+    - ik ben zo teleurgesteld
+    - very sad
+    - ongelukkelig
+    - niet goed
+    - not zeer goed
+    - uitzonderlijk slecht
+
+- intent: bot_challenge
+  examples: |
+    - ben je een chatbot?
+    - ben jij een persoon?
+    - ben ik aan het praten met een bot?
+    - ben ik aan het praten met een persoon?
+
+- intent: valuta
+  examples: |
+    - Australische dollar
+    - Bangladeshi taka
+    - Chinese yuan
+    - Deense kroon
+    - Yuan
+    - Indiase roepie
+    - Japanse Yen
+    - renminbi
+    - Zuid-Koreaanse won
+    - Zwitserse frank
+    - Amerikaanse dollar
+    - Pond Sterling
+    - Canadese dollar
+    - Hong Kong Dollar
+    - Zweedse Kroon
+    - Singapore Dollar
+    - Vietnamese Dong
+    - Angolese Kwanza
+    - Filipijnse peso
+    - Afghaans
+    - Algerijnse dinar
+    - Andorrese peseta
+    - Argentijnse peso
+    - Armeense Dram
+    - Arubaanse florijn
+    - Australisch
+    - Azerbeidzjan Manat
+    - Azerbeidzjaanse Manat
+    - Bahamaanse dollar
+    - Bahreinse dinar
+    - Baht
+    - Balboa
+    - Barbados dollar
+    - Wit-Russische roebel
+    - Belgische frank
+    - Belize Dollar
+    - Bermudiaanse dollar
+    - Bolivar
+    - Bolivar Fuerte
+    - Boliviano
+    - Bolívar
+    - Bolívar Soberano
+    - Braziliaanse Real
+    - Brunei Dollar
+    - Bulgaarse Lev
+    - Burundi Franc
+    - CFA Franc BCEAO
+    - CFA Franc BEAC
+    - GVB Franc
+    - Kaapverdië Escudo
+    - Kaaimaneilanden dollar
+    - Cedi
+    - Chileense peso
+    - Colombiaanse Peso
+    - Comoriaanse frank
+    - Congolese frank
+    - Converteerbare Franc
+    - Converteerbaar merk
+    - Cordoba
+    - Cordoba Oro
+    - Costa Ricaanse Kolon
+    - Kroatische dinar
+    - Kroatische kuna
+    - Cruzado
+    - Cruzeiro
+    - Cruzeiro Real
+    - Cubaanse peso
+    - Cyprus Pond
+    - Tsjechische Koruna
+    - Dalasi
+    - denar
+    - Duitse mark
+    - Dinar
+    - Djibouti Franc
+    - Dobra
+    - Dominicaanse peso
+    - Dong
+    - drachme
+    - Oost-Caribische dollar
+    - Egyptische Pond
+    - Ekwele
+    - El Salvador Colon
+    - Ethiopische Birr
+    - Europese munteenheid (E.C.U)
+    - Falklandeilanden Pond
+    - Fiji-dollar
+    - Financiële Franc
+    - Financiële Rand
+    - Forint
+    - Frans franc
+    - Georgische coupon
+    - Ghana Cedi
+    - Gibraltar Pond
+    - goud
+    - Goudfrank
+    - Gourde
+    - Guarani
+    - Guinea Escudo
+    - Guinee-Bissau peso
+    - Guineese frank
+    - Guyaanse dollar
+    - Hryvnia
+    - IJsland Krona
+    - Indiër
+    - Iraanse Rial
+    - Iraakse dinar
+    - Ierse Pond
+    - Italiaanse lire
+    - Jamaicaanse dollar
+    - Jordaanse dinar
+    - Karbovanet
+    - Keniaanse Shilling
+    - Kina
+    - Koruna
+    - Kroon A/53
+    - Kroon
+    - Kuna
+    - Koeweitse dinar
+    - Kwacha
+    - Kwanza
+    - Kwanza Reajustado
+    - Kyat
+    - Lao kip
+    - Lari
+    - Lets Lats
+    - Letse roebel
+    - Libanees pond
+    - Lek
+    - Lempira
+    - Leone
+    - Leu A/52
+    - Lev
+    - Lev A/52
+    - Lev A/62
+    - Liberiaanse dollar
+    - Libische dinar
+    - Lilangeni
+    - Litouwse litas
+    - Loti
+    - Luxemburg converteerbare frank
+    - Luxemburgse financiële frank
+    - Luxemburgse frank
+    - Malagassische Ariary
+    - Malagasy franc
+    - Malawi Kwacha
+    - Maleisische Ringgit
+    - Maldivische roepie
+    - Mali Franc
+    - Maltese lire
+    - Maltese Pond
+    - Teken van de DDR
+    - Markka
+    - Mauritius roepie
+    - Mexicaanse peso
+    - Mexicaanse Unidad de Inversion (UDI)
+    - Moldavische leu
+    - Marokkaanse dirham
+    - Mozambique Escudo
+    - Mozambique Metical
+    - Mvdol
+    - naira
+    - Nakfa
+    - Namibische dollar
+    - Nepalese roepie
+    - Nederlands Antilliaanse Gulden
+    - Nederland Gulden
+    - Nieuw Cruzado
+    - Nieuwe Dinar
+    - Nieuwe Israëlische Sheqel
+    - Nieuwe Kwanza
+    - Nieuwe Roemeense Leu
+    - Nieuwe Taiwanese dollar
+    - Nieuwe Turkse lire
+    - Nieuwe Joegoslavische dinar
+    - Nieuw Zaïre
+    - Nieuw-Zeelandse dollar
+    - Ngultrum
+    - Geen universele valuta
+    - Noord-Koreaanse Won
+    - Noorse kroon
+    - Nuevo Sol
+    - Oude Dong
+    - Oude kroon
+    - Oude Lek
+    - Oude Leu
+    - Oude Shekel
+    - Oude Shilling
+    - Oude Turkse lire
+    - Oude Uruguayaanse Peso
+    - Ouguiya
+    - Pakistaanse roepie
+    - Palladium
+    - Pataca
+    - Pathet Lao Kip
+    - Pa'anga
+    - Peso
+    - Peso Argentino
+    - Peso Convertible
+    - Peso Uruguayo
+    - Peso boliviano
+    - Platina
+    - Portugese Escudo
+    - Pond
+    - Pula
+    - Qatari Rial
+    - Quetzal
+    - RINET-Fondsencode
+    - Rand
+    - Rhodesische dollar
+    - Omaanse Rial
+    - Riel
+    - Roemeense Leu
+    - Roebel
+    - Rufiyaa
+    - Rupiah
+    - Russische roebel
+    - Rwanda Franc
+    - SDR (Bijzonder Trekkingsrecht)
+    - Sint-Helena Pond
+    - Saudi Riyal
+    - shilling
+    - Servische dinar
+    - Seychellen roepie
+    - zilver
+    - Slowaakse kroon
+    - Sol
+    - Solomoneilanden dollar
+    - Som
+    - Somalische Shilling
+    - Somoni
+    - Zuid-Soedanese Pond
+    - Spaanse peseta
+    - Sri Lankaanse roepie
+    - Sucre
+    - Soedanese dinar
+    - Soedanese Pond
+    - Surinaamse dollar
+    - Surinaamse Gulden
+    - Syli
+    - Syrisch pond
+    - Tajik Roebel
+    - taka
+    - Tala
+    - Talonas
+    - Tanzaniaanse Shilling
+    - Tenge
+    - Timor Escudo
+    - tolar
+    - Dollar van Trinidad en Tobago
+    - Tugrik
+    - Tunesische dinar
+    - Turkse lire
+    - Turkmenistan Manat
+    - Turkmenistan Nieuwe Manat
+    - UAE Dirham
+    - UIC-frank
+    - Amerikaanse dollar
+    - Oegandese Shilling
+    - Previsionele eenheid
+    - Fomento eenheid
+    - Constante Eenheid (UVC)
+    - Echte Eenheid
+    - Uruguayaanse Peso in Unidades Indexadas (UI)
+    - Uruguayaanse Peso
+    - Oezbekistan Som
+    - Vietnamese Dong (VND)
+    - Vatu
+    - WIR Euro
+    - WIR Franc
+    - Gewonnen
+    - Jemenitische dinar
+    - Jemenitische Rial
+    - Yen
+    - Yuan Renminbi
+    - Joegoslavische dinar
+    - Zaïre
+    - Zambiaanse Kwacha
+    - Zimbabwe Dollar
+    - Zloty
+
+- intent: ask_time
+  examples: |
+    - welke datum is het momenteel?
+    - welke dag is het?
+    - wat is de datum van vandaag?
+    - welke dag zijn we?
+
+# - intent: ask_time
+#   examples: |
+#     - what date is it today?
+#     - which day is it?
+#     - what date is it now?
+#     - today?
+
+- intent: transfer_money
+  examples: |
+    - Ik wil een overschrijving doen
+    - Ik wil geld overmaken
+    - Ik wil geld betalen
+    - Ik wil iemand betalen
+    - Kan ik geld overmaken?
+    - geld overmaken naar [Bla bla](name)
+    - Ik moet geld overmaken
+    - Ik wil 1000€ overschrijven naar [Bla bla](name)
+    - ik wil een bepaald bedrag overschrijven naar [Bla bla](name)
+    - Geld overmaken
+    - Ik moet een overschrijving doen
+    - Ik moet een overschrijving doen
+    - Ik moet geld overmaken
+    - Ik wil geld overmaken
+    - Ik moet een geldoverdracht doen
+    - Ik moet geld overmaken
+    - Ik wil een overschrijving doen
+    - Ik wil geld overmaken
+    - Graag had ik 500€ overgeschreven
+    - Ik wil €1000 overschrijven 
+    - Ik wil geld overmaken naar [Bla bla][name]
+    - Ik wil een overschrijving doen
+    - Ik moet naar de bank om een overschrijving te doen
+    - Een overschrijving doen
+    - Ik wil geld overmaken
+    - Ik moet overmaken
+    - Ik moet een overschrijving doen
+    - Ik wil geld overmaken naar [Bla bla](name).
+    - Ik wil geld overmaken.
+    - Ik wil geld betalen.
+    - Ik wil een betaling doen
+    - Ik wil een geldtransactie doen
+    - Ik wil een bedrag naar iemand overmaken
+    - Ik wil zestig dollar overmaken van mijn betaalrekening
+    - Ik wil tweehonderd dollar overmaken van mijn betaalrekening
+    - Ik wil honderdvijftig dollar overmaken naar mijn spaarrekening
+    - Kan ik alstublieft wat geld overmaken tussen mijn rekeningen
+    - Ik wil gewoon honderd dollar overmaken naar mijn spaarrekening
+    - Ik wil een overschrijving doen
+    - Is het mogelijk om online geld over te schrijven?
+    - Zijn online overschrijvingen mogelijk?
+    - Hoe kan ik geld overmaken naar [Bla bla](name)?
+    - Wat moet ik doen om geld over te maken tussen mijn rekeningen?
+    - Ik wil geld overschrijven naar de rekening van mijn [Tom Claes](name)
+    - Ik wil vandaag een overschrijving doen
+    - Geld overmaken
+    - Geld overmaken naar [Bla bla](name)
+
+- intent: cryptocurrency
+  examples: |
+    - Bitcoin
+    - Ethereum
+    - XRP
+    - Tether
+    - Litecoin
+    - Bitcoin-Cash
+    - Chainlink
+    - Cardano
+    - Polkadot
+    - Binance munt
+    - Stellaire
+    - Bitcoin SV
+    - Dogecoin
+    - litecoin
+
+- intent: toon_rekeningen
+  examples: |
+    - toon mijn rekeningen
+    - toon mijn rekeningen
+    - toon al mijn rekeningen
+    - toon me de details van mijn rekeningen
+    - Toon mijn rekeningen
+    - Toon rekeningen
+    - Lijst mijn rekeningen
+    - Toon mijn rekening
+    - Kan ik mijn rekeningnummer controleren
+    - Kan ik mijn rekeningen bekijken
+    - Mijn rekeninggegevens tonen
+    - Mijn rekeningen
+    - Ik wil al mijn rekeningen zien
+    - Kan ik mijn rekeningen bekijken
+    - Een lijst van mijn rekeningen maken
+    - mijn rekeningnummers tonen
+    - Ik wil mijn rekeningen zien
+    - Ik wil al mijn rekeningen zien
+    - Mijn bankrekening tonen
+    - Overzicht van de rekeningen
+    - Toon al mijn rekeningen
+    - toon mijn rekeningoverzicht
+    - toon mijn rekeningsaldo
+    - informatie over rekening
+    - info over rekening
+    - toon de details van mijn rekening
+    - Toon al mijn rekeningen
+    - Mijn rekeninggegevens ophalen
+    - mijn rekeninggegevens ophalen
+    - Mijn rekeninggegevens ophalen
+
+- intent: toon_credit_kaarten
+  examples: |
+    - toon mijn creditcards
+    - lijst van mijn creditcards
+    - laat me de details van mijn creditcards zien
+    - wat is mijn credit card uitstaand
+    - Mijn creditcards tonen
+    - Lijst van mijn creditcards
+    - Ik moet mijn creditcards zien
+    - Kan ik toegang krijgen tot een credit card
+    - Mijn kredietkaarten
+    - Ik wil de gegevens van mijn kredietkaarten zien
+    - Ik wil mijn creditcards zien
+    - Kan ik al mijn creditcards zien
+    - Mijn creditcards tonen
+    - Kredietkaarten tonen
+    - Kredietkaarten tonen
+    - Kunt u mij mijn creditcards laten zien
+    - Ik wil graag mijn creditcards zien
+    - Informatie over kredietkaarten
+    - Mijn kredietkaarten tonen
+    - Creditcard overzicht
+    - Al mijn creditcards tonen
+    - toon mijn kredietkaarten
+    - welke creditcards heb ik allemaal?
+    - Toon al mijn creditcards
+    - Ik wil een lijst van al mijn creditcards zien
+    - Ik wil informatie van al mijn creditcards zien
+
+- intent: toon_statement
+  examples: |
+    - Laat me mijn bankafschrift zien
+    - Ik wil graag mijn bankafschrift zien
+    - Toon me al mijn transacties
+    - Geef me een overzicht van mijn afschriftgeschiedenis
+    - Kunt u mij mijn bankafschrift bezorgen?
+    - Afschriften uitlezen
+    - Afschriften afdrukken
+    - Ik wil mijn afschriften zien
+    - Kan ik mijn afschriften bekijken?
+    - Mijn afschriften tonen
+    - Mijn afschriften
+    - Ik wil mijn afschriften zien
+    - Ik wil mijn afrekening zien
+    - Gelieve uittreksel van mijn afschriften
+    - Maak een verklaring
+    - Verklaringen tonen
+    - Afschriften tonen
+    - Rekeningbewegingen tonen
+    - Kunt u mij mijn afschriften tonen
+    - Ik wil mijn afschriften zien
+    - Mijn afschriften tonen
+    - Rekening Transactie overzicht
+    - Toon mijn rekeningafschriften
+    - Toon mijn bankgegevens.
+    - Laat mijn debiteringen en crediteringen zien.
+    - Kan ik mijn ontvangsten en betalingen bekijken?
+    - Kan ik mijn in- en uitgaven zien?
+    - Laat me mijn transactiehistoriek zien
+    - Kan ik mijn transactielogboek zien?
+    - Ik wil graag mijn bankrekeningoverzicht geschiedenis zien
+
+- intent: rente_tarief
+  examples: |
+    - ja zeg wat is de huidige rentevoet voor leningen
+    - wat is de rente voor een 30-jarige hypotheek
+    - wat is de beschikbare rente voor hypotheken vandaag
+    - wat is de rente voor uw gouden creditcards
+    - wat is de rente voor uw credit card
+    - Wat is de beste rente die ik kan krijgen bij uw bank
+    - Ik moet wat geld lenen dus ik wil de rentetarieven weten
+    - Wat zijn de rentetarieven als ik om honderdduizend vraag
+
+- intent: lost_card
+  examples: |
+    - ik ben mijn kaart kwijt
+    - Ik weet niet waar mijn kaart is
+    - Ik heb geen idee waar ik mijn kaart gelaten heb
+    - Ik heb mijn kaart ergens laten liggen en nu moet ik hem annuleren
+    - Ik weet echt niet meer waar mijn kaart is
+    - Ik ben bang dat ik niet weet waar mijn kaart is
+    - Ik ben mijn kredietkaart kwijt en ik denk niet dat ik ze nog zal vinden
+    - Mijn kaart is weg, ik moet hem ergens hebben laten liggen
+    - Ik ben bang dat iemand mijn kaart heeft meegenomen, dus ik kan hem beter annuleren
+    - Ik heb geen idee waar mijn kaart is
+    - Ik kan mijn kaart niet vinden en weet niet wat ik moet doen
+    - Ik kan mijn kaart niet vinden, wat moet ik doen?
+
+- intent: change_pin
+  examples: |
+    - Ik herinner me mijn pincode niet en moet hem veranderen
+    - Ik wil mijn pincode veranderen omdat ik hem niet meer weet.
+    - Hoe kan ik mijn pincode veranderen via de telefoon?
+    - Is het mogelijk om de pincode van mijn kaart online te wijzigen?
+    - Kunt u mij helpen mijn pin te resetten
+    - Kan ik een nieuwe pincode voor mijn kaart krijgen
+    - Wat moet ik doen om een nieuw pinnummer te krijgen
+    - Hoe kan ik de geheime code van mijn kaart herstellen
+    - Ik ben het geheime nummer van mijn kaart kwijt en nu kan ik hem niet meer gebruiken
+    - Waar kan ik de pincode van mijn kaart vinden?
+    - Waar vind ik de geheime code van mijn kaart?
+    - Ik denk dat iemand mijn pincode ontdekt heeft en ik wil hem veranderen
+    - Ik wil de geheime cijfers voor toegang tot mijn kredietkaart veranderen.
+
+- intent: retirement_plan
+  examples: |
+    - Ik wil me inschrijven voor een pensioenspaarplan
+    - Wat zijn de beschikbare plannen voor pensioen in uw bank?
+    - wat is de beste RSP beschikbaar in uw producten
+    - Biedt u pensioenspaarplannen aan?
+    - Ik wil wat geld beleggen voor mijn pensioen
+
+- intent: online_bankieren
+  examples: |
+    - Ik wil toegang krijgen tot internetbankieren
+    - Wat kan ik doen in online bankieren?
+    - Hoe kan ik profiteren van uw online bankieren
+    - Hebben jullie een mobiele app voor online bankieren?
+    - Kan ik online overschrijvingen doen?
+    - Kan ik mijn saldo online controleren?
+    - Ik wil een wachtwoord voor online bankieren
+    - Wat kan ik online doen en niet via de telefoon?
+    - Zijn er dingen die ik alleen online kan doen?
+    - Gelieve mijn transactielogboek op te vragen
+    - Ik wil de historiek van mijn rekeninguittreksels zien
+
+- intent: inform_amount
+  examples: |
+    - €10
+    - 5000
+    - 500
+    - €100
+    - 500€
+    - 100 euro
+    - 1000 euro
+    - ik wil 500€ overschrijven 
+    - één euro 
+    - duizend euro
+    - graag vijfhonderd euro 
+
+- intent: inform_name
+  examples: |
+    - aan [Tom Claes](name)
+    - [Kjell Vanden Berghe](name)
+    - naar [Bla bla](name)
+    - Ik wil overschrijven naar [Tom Walker](name)

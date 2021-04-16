@@ -1,0 +1,103 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_saldo
+  - intent: inform_amount
+  - action: set_amount_saldo
+  - action: utter_next
+
+
+- story: ask time
+  steps:
+  - intent: ask_time
+  # - action: setDate
+  - action: utter_time
+
+
+- story: Activate form
+  steps:
+  - slot_was_set:
+    - saldo_filled: true
+  - intent: transfer_money
+  - action: transaction_form
+  - active_loop: transaction_form
+  - active_loop: null
+  - action: utter_confirm
+  - intent: affirm
+  - action: subtract_money
+  - action: action_reset_slots
+
+
+- story: Activate form no start saldo
+  steps:
+  - slot_was_set:
+    - saldo_filled: false
+  - intent: transfer_money
+  - action: utter_saldo
+  - intent: inform_amount
+  - action: set_amount_saldo
+  - action: transaction_form
+  - active_loop: transaction_form
+  - active_loop: null
+  - action: utter_confirm
+  - intent: affirm
+  - action: subtract_money
+  - action: action_reset_slots
+
+
+
+- story: Activate form deny
+  steps:
+  - slot_was_set:
+    - saldo_filled: true
+  - intent: transfer_money
+  - action: transaction_form
+  - active_loop: transaction_form
+  - active_loop: null
+  - action: utter_confirm
+  - intent: deny
+  - action: action_reset_slots
+
+
+
+- story: Activate form interrupt
+  steps:
+  - slot_was_set:
+    - saldo_filled: true
+  - intent: transfer_money
+  - slot_was_set:
+    - requested_slot: first_name
+  - action: transaction_form
+  - active_loop: transaction_form
+  - intent: greet
+  - action: utter_greet
+  - action: utter_continue
+  - intent: affirm
+  - action: transaction_form
+  - active_loop: null
+  - action: utter_confirm
+  - intent: affirm
+  - action: subtract_money
+  - action: action_reset_slots
+
+
+
+- story: Activate form interrupt cancel
+  steps:
+  - slot_was_set:
+    - saldo_filled: true
+  - intent: transfer_money
+  - action: transaction_form
+  - active_loop: transaction_form
+  - intent: ask_time
+  - action: utter_time
+  - action: utter_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_reset_slots

@@ -1,0 +1,140 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - valuta
+  - transfer_money
+  - cryptocurrency
+  - toon_rekeningen
+  - toon_credit_kaarten
+  - toon_statement
+  - rente_tarief
+  - lost_card
+  - change_pin
+  - retirement_plan
+  - online_bankieren
+  - ask_time
+  - inform_amount
+  - inform_name
+
+
+
+entities:
+  - time
+  - amount-of-money
+  - name
+  - number
+  - distance
+  - date
+
+slots: 
+  time:
+    type: any
+  date:
+    type: any
+  amount_of_money:
+    type: any
+  amount_of_saldo:
+    type: any
+  name:
+    type: text
+  number:
+    type: any
+  distance:
+    type: any
+  saldo_filled:
+    type: bool
+    initial_value: false
+
+
+
+forms:
+  transaction_form:
+    name:
+    - type: from_entity
+      entity: name
+      intent: inform_name
+    amount_of_money:
+    - type: from_entity
+      entity: amount-of-money
+      intent: inform_amount
+
+actions: 
+  - check_name_existence
+  - check_amount
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_confirm
+  - utter_goodbye
+  - utter_iamabot
+  - utter_time
+  - utter_date
+  - setDate
+  - utter_name
+  - utter_amount
+  - set_amount_saldo
+  - validate_transaction_form
+  - subtract_money
+  - action_reset_slots
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey! Hoe gaat het?"
+
+  utter_cheer_up:
+  - text: "Hier is iets om jou op te vrolijken:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Heeft dat jou geholpen?"
+
+  utter_happy:
+  - text: "Top, ga zo verder!"
+
+  utter_confirm:
+  - text: "Bevestig je dat je {amount_of_money} wil overschrijven naar {name}?"
+
+  utter_goodbye:
+  - text: "Tot ziens"
+
+  utter_iamabot:
+  - text: "Ik ben een chatbot, gegenereerd door Kjell."
+
+  utter_time: 
+  - text: "Het is momenteel {time}"
+
+  utter_date: 
+  - text: "De datum van vandaag is {date}."
+
+  utter_name: 
+  - text: "Naar wie wil je overschrijven?"
+
+  utter_amount: 
+  - text: "Welk bedrag wil je overschrijven?"
+
+  utter_ask_name:
+  - text: Naar wie wil je een overdracht doen?
+  utter_ask_amount_of_money:
+  - text: Wat is het bedrag dat je wil overschrijven?
+  utter_continue:
+  - text: Wil je verder gaan met jouw overschrijving?
+
+  utter_saldo: 
+    - text: "Wat is jouw huidig saldo?"
+  utter_next: 
+    - text: "Bedankt, wat wil je doen?"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
